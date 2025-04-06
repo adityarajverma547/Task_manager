@@ -1,0 +1,106 @@
+/* task-form.css - Additional styles for TaskForm component */
+
+/* Custom scrollbar styling */
+.task-form-container {
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(59, 130, 246, 0.5) transparent;
+  }
+  
+  /* For Webkit browsers (Chrome, Safari, etc.) */
+  .task-form-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .task-form-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .task-form-container::-webkit-scrollbar-thumb {
+    background-color: rgba(59, 130, 246, 0.5);
+    border-radius: 20px;
+  }
+  
+  .task-form-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(59, 130, 246, 0.8);
+  }
+  
+  /* Form field animations */
+  .form-field {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-field:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Label styles */
+  .label-chip {
+    transition: all 0.2s ease;
+  }
+  
+  .label-chip:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Dark mode specific overrides */
+  .dark-theme .form-field {
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Attachment item hover effect */
+  .attachment-item {
+    transition: background-color 0.2s ease;
+  }
+  
+  .attachment-item:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+  
+  /* Button animations */
+  .animated-button {
+    transition: all 0.2s ease;
+  }
+  
+  .animated-button:hover {
+    transform: translateY(-1px);
+  }
+  
+  .animated-button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Form section dividers */
+  .form-section {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-section:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.2), transparent);
+  }
+  
+  /* Form transitions */
+  .form-appear {
+    animation: formAppear 0.3s ease forwards;
+  }
+  
+  @keyframes formAppear {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
